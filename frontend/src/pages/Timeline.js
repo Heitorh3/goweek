@@ -61,9 +61,9 @@ export default class Timeline extends Component {
             placeholder="O que está acontecendo?"/>
 
         </form>
-        <ul className="tweet-list">
+        <ul className="tweet-list">        
           {this.state.tweets.map(tweet => (
-            <Tweet key={tweet._id} value={tweet}/>          
+            <Tweet key={tweet._id} tweet={tweet}/>       
           ))}
         </ul>
       </div>

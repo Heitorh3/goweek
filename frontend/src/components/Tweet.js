@@ -6,7 +6,7 @@ import like from '../like.svg';
 
 export default class Tweet extends Component {
 
-  handleLike = async () => {
+  handLeLike = async () => {
     const { _id } = this.props.tweet;
 
     await api.post(`likes/${_id}`);
@@ -14,17 +14,18 @@ export default class Tweet extends Component {
 
   render() {
     const {tweet} = this.props;
-
+    
     return (
         <li className="tweet">
             <strong>{tweet.author}</strong>
             <p>{tweet.content}</p>
             
-            <button type="button" onClick={this.handleLike}>
+            <button type="button" onClick={this.handLeLike}>
                 <img src={like} alt="Like"/>
                {tweet.likes} 
             </button>
         </li>
+      
     )
   }
 }
