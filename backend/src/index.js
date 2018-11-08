@@ -6,8 +6,12 @@ const app = express();
 
 const server = require('http').Server(app);
 const io = require('socket.io')(server);
-
+/*
 mongoose.connect('mongodb://goweek:goweek123@ds251217.mlab.com:51217/goweek-heitor', {
+    useNewUrlParser: true
+});
+*/
+mongoose.connect('mongodb://localhost:17017/goweek',{
     useNewUrlParser: true
 });
 
